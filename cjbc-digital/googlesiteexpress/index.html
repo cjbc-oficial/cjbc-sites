@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Site Express — Site Profissional em 72h | CJBC</title>
+    <meta name="description" content="Seu site profissional pronto em 72 horas. Sem mensalidade, sem enrolação. Garantia 100% ou dinheiro de volta.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #D4AF37;
+            font-weight: 700;
+        }
+
+        .header-ctas {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-header {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6B4BA3 0%, #8B5FBF 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(107, 75, 163, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #D4AF37;
+            border: 2px solid #D4AF37;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(107, 75, 163, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            color: #D4AF37;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid #D4AF37;
+        }
+
+        .badge.urgency {
+            background: rgba(220, 53, 69, 0.2);
+            color: #ff6b6b;
+            border-color: #ff6b6b;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subheadline {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, rgba(107, 75, 163, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+            border: 2px solid #D4AF37;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .price-box::before {
+            content: '⚡ OFERTA DE LANÇAMENTO';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #6B4BA3 0%, #D4AF37 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #D4AF37;
+            margin: 1rem 0;
+        }
+
+        .price-original {
+            font-size: 1.2rem;
+            color: #888;
+            text-decoration: line-through;
+            margin-right: 1rem;
+        }
+
+        .price-discount {
+            font-size: 1rem;
+            color: #ff6b6b;
+            font-weight: 700;
+        }
+
+        .price-details {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            margin-top: 1rem;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-large {
+            background: linear-gradient(135deg, #6B4BA3 0%, #8B5FBF 100%);
+            color: white;
+        }
+
+        .btn-primary-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(107, 75, 163, 0.4);
+        }
+
+        .btn-secondary-large {
+            background: transparent;
+            color: #D4AF37;
+            border: 2px solid #D4AF37;
+        }
+
+        .btn-secondary-large:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Trust Section */
+        .trust {
+            background: rgba(107, 75, 163, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            padding: 1rem;
+        }
+
+        .trust-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+
+        .trust-label {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            margin-top: 0.5rem;
+        }
+
+        /* Section */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Problema vs Solução */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .comparison-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 2px solid transparent;
+        }
+
+        .comparison-box.problem {
+            border-color: rgba(255, 107, 107, 0.3);
+        }
+
+        .comparison-box.solution {
+            border-color: rgba(107, 75, 163, 0.5);
+            background: rgba(107, 75, 163, 0.1);
+        }
+
+        .comparison-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-box ul {
+            list-style: none;
+        }
+
+        .comparison-box li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .comparison-box.problem li::before {
+            content: '⚠️';
+            font-size: 1.2rem;
+        }
+
+        .comparison-box.solution li::before {
+            content: '✅';
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .price {
+                font-size: 2rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .btn-large {
+                width: 100%;
+            }
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            background: rgba(107, 75, 163, 0.15);
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: #D4AF37;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: rgba(107, 75, 163, 0.1);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #D4AF37;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-style: italic;
+            color: #d0d0d0;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6B4BA3 0%, #D4AF37 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: #D4AF37;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6B4BA3 0%, #D4AF37 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .process-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #D4AF37;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(107, 75, 163, 0.1);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #b0b0b0;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Guarantee */
+        .guarantee {
+            background: linear-gradient(135deg, rgba(107, 75, 163, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+            border: 2px solid #D4AF37;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .guarantee h3 {
+            font-size: 1.8rem;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 15, 15, 0.95);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #D4AF37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .countdown-item {
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .countdown-number {
+            font-size: 1.5rem;
+            color: #D4AF37;
+        }
+
+        .countdown-label {
+            font-size: 0.75rem;
+            color: #b0b0b0;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">💜 CJBC</div>
+            <div class="header-ctas">
+                <a href="https://loja.infinitepay.io/cjbc_lojaonline/lpw4725-google-site-express" class="btn-header btn-primary">Comprar Agora</a>
+                <a href="https://wa.me/5531972219836" class="btn-header btn-secondary">WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge urgency">⚡ OFERTA DE LANÇAMENTO - PREÇO SOBE EM 7 DIAS</div>
+            
+            <h1>Seu site profissional pronto em 72 horas</h1>
+            
+            <p class="subheadline">Sem mensalidade, sem enrolação, sem dependência. Você recebe o site completo — e fica dono para sempre. Transforme visitantes em clientes a partir de hoje.</p>
+
+            <div class="price-box">
+                <div style="font-size: 0.9rem; color: #b0b0b0; margin-bottom: 0.5rem;">INVESTIMENTO ÚNICO</div>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span class="price-original">R$ 797</span>
+                    <span class="price">R$ 597</span>
+                    <span class="price-discount">-25%</span>
+                </div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">7</div>
+                        <div class="countdown-label">DIAS</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">12</div>
+                        <div class="countdown-label">HORAS</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">34</div>
+                        <div class="countdown-label">MINUTOS</div>
+                    </div>
+                </div>
+                <div class="price-details">✅ Pagamento único ✅ Sem mensalidade ✅ Você fica dono</div>
+            </div>
+
+            <div class="hero-ctas">
+                <a href="https://loja.infinitepay.io/cjbc_lojaonline/lpw4725-google-site-express" class="btn-large btn-primary-large">🔑 Comprar Agora - R$ 597</a>
+                <a href="https://wa.me/5531972219836" class="btn-large btn-secondary-large">💬 Tirar Dúvidas no WhatsApp</a>
+            </div>
+
+            <div class="trust">
+                <div class="trust-item">
+                    <div class="trust-number">150+</div>
+                    <div class="trust-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">4.9★</div>
+                    <div class="trust-label">Avaliação Média</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">72h</div>
+                    <div class="trust-label">Entrega Garantida</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">100%</div>
+                    <div class="trust-label">Garantia de Satisfação</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema vs Solução -->
+    <section>
+        <h2>O Cenário Atual</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 2rem; font-size: 1.1rem;">Você tem um negócio real. Seu site não representa isso.</p>
+        
+        <div class="comparison">
+            <div class="comparison-box problem">
+                <h3>❌ SEM O SITE</h3>
+                <ul>
+                    <li>Sem presença profissional no Google</li>
+                    <li>Passa credenciais pelo WhatsApp toda hora</li>
+                    <li>Perde clientes que pesquisam seu negócio</li>
+                    <li>Parece menor do que realmente é</li>
+                    <li>Sem endereço digital fixo</li>
+                </ul>
+            </div>
+            <div class="comparison-box solution">
+                <h3>✅ COM GOOGLE SITE EXPRESS</h3>
+                <ul>
+                    <li>Site no ar em até 72 horas</li>
+                    <li>Aparece no Google com link próprio</li>
+                    <li>Endereço digital para compartilhar</li>
+                    <li>Transmite profissionalismo imediato</li>
+                    <li>Você é dono — sem custo mensal</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que você recebe -->
+    <section>
+        <h2>Tudo o que seu site precisa</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 3rem; font-size: 1.1rem;">Nada do que não precisa. Escopo claro. Entrega real. Sem surpresas.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Site no Google Sites</h3>
+                <p>Hospedagem gratuita, estável e gerenciada pelo Google</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3>Até 5 Seções</h3>
+                <p>Início, Sobre, Serviços, Contato + 1 seção extra à escolha</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>100% Responsivo</h3>
+                <p>Funciona perfeitamente no celular, tablet e desktop</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>Link do WhatsApp</h3>
+                <p>Botão de contato direto integrado ao seu número</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Identidade Visual</h3>
+                <p>Cores e logo do seu negócio aplicados no site</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📬</div>
+                <h3>Formulário de Contato</h3>
+                <p>Mensagens diretas para o seu e-mail</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔑</div>
+                <h3>Você Fica Dono</h3>
+                <p>Acesso total à conta Google Sites. Zero dependência</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Entrega em 72h</h3>
+                <p>Após preenchimento do briefing. Prazo contado em horas úteis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferencial CJBC -->
+    <section>
+        <h2>Por que escolher a CJBC?</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 3rem; font-size: 1.1rem;">4 pilares que fazem a diferença na entrega</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Rapidez</h3>
+                <p>Nada de semanas esperando. O briefing entra hoje, o site sai em 72 horas úteis. Sem enrolação.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔑</div>
+                <h3>Independência Total</h3>
+                <p>Você recebe o acesso completo. Não precisa da CJBC para nada depois da entrega. Você é o dono.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Escopo Fechado</h3>
+                <p>Você sabe exatamente o que recebe antes de pagar. Sem surpresas, sem cobranças extras.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Transparência</h3>
+                <p>CNPJ ativo, responsável identificado, e-mail e WhatsApp diretos. Você sabe com quem está falando.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section>
+        <h2>Resultados Reais</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 3rem; font-size: 1.1rem;">Veja o que clientes reais conquistaram</p>
+        
+        <div class="testimonials">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div style="color: #D4AF37; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Achei que ia levar semanas. Em 72 horas meu site estava no ar e profissional. Já recebi 3 clientes através dele!"</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
+                        <div>
+                            <div class="testimonial-name">Marina Costa</div>
+                            <div class="testimonial-role">Consultora de Marketing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="color: #D4AF37; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Não sabia por onde começar. O Celso explicou tudo, fez rápido e ainda me ensinou como editar depois. Perfeito!"</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RO</div>
+                        <div>
+                            <div class="testimonial-name">Roberto Oliveira</div>
+                            <div class="testimonial-role">Encanador Autônomo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="color: #D4AF37; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Melhor investimento que fiz. Saiu mais barato que outras agências e ficou muito melhor. Recomendo!"</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AB</div>
+                        <div>
+                            <div class="testimonial-name">Ana Beatriz</div>
+                            <div class="testimonial-role">Proprietária de Salão</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo -->
+    <section>
+        <h2>Como Funciona</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 3rem; font-size: 1.1rem;">4 passos simples para seu site estar no ar</p>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Pagamento</h3>
+                <p>Você faz o pagamento e recebe o link de acesso</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Briefing</h3>
+                <p>Preenchemos o formulário com seus dados e preferências</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Criação</h3>
+                <p>Criamos seu site em até 72 horas úteis</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Entrega</h3>
+                <p>Você recebe o acesso completo e fica dono</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia -->
+    <section>
+        <div class="guarantee">
+            <h3>🛡️ Garantia 100% de Satisfação</h3>
+            <p>Se você não ficar satisfeito com seu site nos primeiros 7 dias, devolvemos 100% do seu investimento. Sem perguntas, sem burocracias, sem complicações.</p>
+            <p style="font-size: 1rem; color: #b0b0b0;">Queremos que você tenha total confiança em sua compra.</p>
+            <div style="margin-top: 20px; padding: 15px; background: rgba(212, 175, 55, 0.15); border-radius: 8px; border-left: 4px solid #D4AF37;">
+                <div style="font-size: 1.1em; font-weight: 600; color: #D4AF37; margin-bottom: 10px;">✨ OFERTA ESPECIAL</div>
+                <div style="color: #e0e0e0; font-size: 0.95em;">
+                    <strong>Até 6x sem juros</strong> no cartão de crédito
+                </div>
+                <div style="color: #e0e0e0; font-size: 0.95em; margin-top: 5px;">
+                    <strong>+ 1 ano de domínio grátis</strong> para os 10 primeiros clientes
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <h2>Perguntas Frequentes</h2>
+        
+        <div class="faq-item active">
+            <div class="faq-question">
+                <span>Qual é o prazo real de entrega?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                Até 72 horas úteis após o recebimento do briefing preenchido. O briefing é enviado por WhatsApp logo após a confirmação do pagamento. Se você preencher rápido, seu site sai mais rápido ainda.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Preciso pagar mensalidade depois?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                Não. O Google Sites é gratuito e você fica com o acesso completo. O investimento é único: R$ 597. Sem nenhum custo recorrente. Você é dono do site para sempre.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Posso editar o site depois de entregue?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                Sim. O Google Sites tem editor visual simples. Você recebe o acesso de administrador e pode editar textos, imagens e seções quando quiser. Você tem total controle.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>E se eu não gostar do resultado?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                São incluídas até 2 rodadas de ajustes após a entrega. Você solicita por WhatsApp e os ajustes são feitos em até 48h úteis. Se mesmo assim não gostar, tem garantia de reembolso em 7 dias.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Como funciona o processo após o pagamento?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                1) Pagamento confirmado → 2) Briefing enviado por WhatsApp → 3) Você preenche e retorna → 4) Site criado em 72h → 5) Acesso entregue. Simples assim. Você recebe tudo por WhatsApp.
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="cta" style="text-align: center; background: linear-gradient(135deg, rgba(107, 75, 163, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%); border-radius: 12px; padding: 4rem 2rem;">
+        <h2>Seu site profissional está a um clique</h2>
+        <p style="color: #b0b0b0; font-size: 1.1rem; margin-bottom: 2rem;">Sem mensalidade. Sem dependência. Entregue em 72h.</p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="https://loja.infinitepay.io/cjbc_lojaonline/lpw4725-google-site-express" class="btn-large btn-primary-large">🔑 Comprar Agora - R$ 597</a>
+            <a href="https://wa.me/5531972219836" class="btn-large btn-secondary-large">💬 Falar com Celso Jr</a>
+        </div>
+
+        <div style="color: #888; font-size: 0.9rem;">
+            ✅ Pagamento único ✅ Sem mensalidade ✅ Você fica dono ✅ CNPJ: 53.250.647/0001-38
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://cjbc.com.br">CJBC.com.br</a>
+                <a href="https://wa.me/5531972219836">WhatsApp</a>
+                <a href="mailto:celsojr@cjbc.com.br">E-mail</a>
+                <a href="https://www.linkedin.com/in/celsojrbr/">LinkedIn</a>
+            </div>
+            <p>© 2026 CJBC - Celso Jr Business Center. Todos os direitos reservados.</p>
+            <p>CNPJ: 53.250.647/0001-38 | Belo Horizonte, MG</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const countDownDate = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000).getTime();
+            
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
