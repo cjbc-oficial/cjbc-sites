@@ -1,0 +1,13 @@
+@media (max-width:520px){
+  .wrap{width:min(100% - 28px,var(--max))}
+  .header{height:68px}
+  .brand{font-size:1.05rem}
+  .hero{padding:54px 0 62px}
+  .hero .eyebrow{font-size:.68rem;letter-spacing:.11em;line-height:1.5}
+  .hero h1{font-size:clamp(2.25rem,11.5vw,3rem);line-height:1.02;margin:.32em 0}
+  .lead{font-size:1.05rem;line-height:1.55}
+  .actions{flex-direction:column;margin-top:24px}
+  .button{width:100%}
+  .micro{text-align:center}
+  .section{padding:58px 0}
+}
