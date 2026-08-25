@@ -1,1 +1,7 @@
 https://www.digital.cjbc.com.br/* https://digital.cjbc.com.br/:splat 301!
+/catalogo-digital /catalogodigital/ 301
+/catalogo-digital/* /catalogodigital/:splat 301
+/kit-divulgacao /kitdivulgacao/ 301
+/kit-divulgacao/* /kitdivulgacao/:splat 301
+/cartao-digital /cartaodigital/ 301
+/cartao-digital/* /cartaodigital/:splat 301
